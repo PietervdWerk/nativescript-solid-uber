@@ -1,0 +1,31 @@
+{
+  "name": "nativescript-uber-eats",
+  "main": "src/app.ts",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "postinstall": "patch-package"
+  },
+  "dependencies": {
+    "@nativescript-community/ui-collectionview": "^5.1.9",
+    "@nativescript-community/ui-pager": "^14.1.6",
+    "@nativescript/core": "^8.5.9",
+    "@triniwiz/nativescript-image-cache-it": "^7.4.0",
+    "nativescript-vue": "3.0.0-beta.8",
+    "patch-package": "^8.0.0"
+  },
+  "devDependencies": {
+    "@nativescript-dom/core-types": "^1.0.29",
+    "@nativescript-dom/vue-types": "^1.0.15",
+    "@nativescript/android": "8.5.1",
+    "@nativescript/ios": "8.5.2",
+    "@nativescript/preview-cli": "^1.0.5",
+    "@nativescript/stackblitz": "^0.0.8",
+    "@nativescript/tailwind": "^2.0.1",
+    "@nativescript/types": "~8.5.0",
+    "@nativescript/webpack": "~5.0.0",
+    "@types/node": "~17.0.21",
+    "tailwindcss": "^3.1.8",
+    "typescript": "~4.9.5"
+  }
+}
