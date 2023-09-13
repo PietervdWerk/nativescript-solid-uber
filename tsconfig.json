@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
-    "strict": true,
-    "target": "esnext",
+    "strict": false,
+    "target": "es2017",
     "module": "esnext",
     "moduleResolution": "node",
-    "lib": ["esnext", "WebWorker"],
+    "lib": ["es2017", "DOM"],
     "sourceMap": true,
+    "jsx": "preserve",
     "noEmitHelpers": true,
     "importHelpers": true,
     "baseUrl": ".",
@@ -14,10 +15,13 @@
       "@/*": ["src/*"]
     },
     "typeRoots": ["types"],
-    "types": ["node",
-    "@nativescript-dom/core-types",
-    "@nativescript-dom/vue-types"
+    "types": [
+      "node",
+      "@nativescript-dom/vue-types",
+      "@nativescript-dom/core-types",
+      "@nativescript-dom/solidjs-types"
     ],
+    "jsxImportSource": "@nativescript-dom/solidjs-types",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
