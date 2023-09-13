@@ -16,7 +16,7 @@ export const Header = (props: HeaderProps) => {
             color={new Color("black")}
             className="text-center"
             fontSize={22}
-          ></Icon>
+          />
         </stacklayout>
       </stacklayout>
       <stacklayout col="1" className="rounded-full bg-gray" orientation="horizontal" height="40">
