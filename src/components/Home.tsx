@@ -7,7 +7,6 @@ import { CarItemRestaurant } from "./CarItemRestaurant"
 import { Utils } from "@nativescript/core"
 import { CarItemOption } from "./CarItemOption"
 import { DataItem } from "~/types"
-import { DynamicList } from "./collectionview"
 import { Component, createSignal } from "solid-js"
 // import { items } from "~/MockData"
 
@@ -91,33 +90,6 @@ const Home = () => {
             <Header className="my-2" />
             <TextSearch className="mt-4  pb-2" />
           </stacklayout>
-          <label>hello</label>
-          <button
-            text="Add item"
-            on:tap={() => {
-              setItems((prev) => {
-                return [...prev, prev.length]
-              })
-            }}
-            style={{
-              height: 50,
-              minHeight: 50,
-            }}
-          />
-          <contentview
-            style={{
-              flexShrink: 1,
-            }}
-          >
-            <DynamicList
-              itemTypes={["even", "odd"]}
-              items={items()}
-              renderItem={({ item, index, type }) => <Item item={item} index={index} type={type} />}
-              onItemType={(item, index) => {
-                return index % 2 === 0 ? "even" : "odd"
-              }}
-            />
-          </contentview>
         </gridlayout>
       </page>
     </frame>
@@ -125,26 +97,6 @@ const Home = () => {
 }
 
 export default Home
-
-const Item: Component<{
-  item?: () => any
-  index?: () => number
-  type: () => string
-}> = (props) => {
-  return props.type() === "even" ? (
-    <contentview>
-      <flexboxlayout style={{ height: 100, padding: 10, backgroundColor: "#f0f0f0" }}>
-        <label text={props.index?.() + " " + props.type()} />
-      </flexboxlayout>
-    </contentview>
-  ) : (
-    <contentview>
-      <flexboxlayout style={{ height: 50, padding: 10, backgroundColor: "#a9a9a9" }}>
-        <label text={props.index?.() + " " + props.type()} />
-      </flexboxlayout>
-    </contentview>
-  )
-}
 
 // <gridlayout rows="auto">
 //   <stacklayout ref={headerViewRef} className="px-4 py-1">
